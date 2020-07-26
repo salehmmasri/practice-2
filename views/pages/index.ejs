@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <% teamsinfo.forEach(val=>{%>
+    <p><%=val.teamname%></p>
+    <img src="<%=val.img_url%>" alt="no" srcset="">
+    <p><%=val.found%></p>
+    <form action="/details/<%=val.id%>" method="get">
+        <input type="text" name="teamname" id="" value="<%=val.teamname%>">
+        <input type="text" name="img_url" id="" value="<%=val.img_url%>">
+        <input type="text" name="found" id="" value="<%=val.found%>">
+        <input type="submit" value="show in details">
+    </form>
+    <%})%>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show-page</title>
+</head>
+
+<body>
+    <section>
+        <% team.forEach(val=>{%>
+        <p><%=val.teamname%></p>
+        <img src="<%=val.img_url%>" alt="no" srcset="">
+        <p><%=val.found%></p>
+        <form action="/add" method="POST">
+            <input type="text" name="teamname" id="" value="<%=val.teamname%>">
+            <input type="text" name="img_url" id="" value="<%=val.img_url%>">
+            <input type="text" name="found" id="" value="<%=val.found%>">
+            <input type="submit" value="add">
+        </form>
+        <%})%>
+    </section>
+</body>
+
+</html>

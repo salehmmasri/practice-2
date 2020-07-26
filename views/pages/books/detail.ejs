@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+
+<body>
+    <p><%=teamsDetail.teamname%></p>
+    <img src="<%=teamsDetail.img_url%>" alt="no" srcset="">
+    <p><%=teamsDetail.found%></p>
+    <form action="/update/<%=teamsDetail.id%>?_method=put" method="POST">
+        <input type="text" name="teamname" id="" value="<%=teamsDetail.teamname%>">
+        <input type="text" name="img_url" id="" value="<%=teamsDetail.img_url%>">
+        <input type="text" name="found" id="" value="<%=teamsDetail.found%>">
+        <input type="submit" value="update">
+    </form>
+    <form action="/delete/<%=teamsDetail.id%>?_method=delete" method="post">
+        <input type="submit" value="delete">
+    </form>
+</body>
+
+</html>
